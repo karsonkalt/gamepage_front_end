@@ -1,0 +1,354 @@
+/*CSS*/
+
+@import url("https://necolas.github.io/normalize.css/latest/normalize.css");
+
+* {
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    min-width: 700px;
+    max-width: 1500px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: green;
+    border-color: #7a7a7a;
+    border: 0 0 1px 0;
+    background-color: #212121;
+}
+
+#pageTitle h1 {
+    color: white;
+    font-size: 20px;
+    padding:5px 0 0 20px;
+    font-weight: 700;
+    display:inline-block;
+}
+
+#pageTitle h2 {
+    color: #b5b5b5;;
+    display:inline-block;
+    font-size: 20px;
+    padding-left:20px;
+    font-weight:100;
+    height:20px;
+}
+
+#leaveGame {
+    margin:auto 15px auto 0;
+    display:flex;
+    text-decoration: none;
+    
+}
+
+#leaveGame div {
+    color:#636363;
+    padding:6px 10px 0 0;
+    transition: color .25s;
+    font-size:13px;
+}
+
+#leaveGame svg {
+    fill:#636363;
+    height:20px;
+    width:20px;
+    padding-right:10px;
+    transition: fill .25s;
+    margin: 3px 0 0 0;
+}
+
+#leaveGame:hover svg {
+    fill:#e3e3e3;
+}
+
+#leaveGame:hover div {
+    color: #e3e3e3;
+}
+
+#screenSpace {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    background-color: #595959;
+    background: 
+  repeating-linear-gradient(
+    45deg,
+    #4d4d4d,
+    #4d4d4d 5px,
+    #595959 5px,
+    #595959 10px
+  );
+}
+
+#leftScreenSpace {
+    width: 100%;
+}
+
+#playSpace {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#turnIndicator {
+    line-height: 30px;
+    width: 130px;
+    border-radius: 20px;
+    background-color: #3464eb;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    animation: float 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+#gameContainer {
+    border: 2px solid #757575;
+    border-radius:5px;
+    display: block;
+    padding: 15px;
+    z-index: 2;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+#gameContainer.active {}
+
+#gameContainer.inactive {}
+
+#gameLog {
+    margin: 15px;
+    border-radius: 5px;
+    width: 300px;
+    max-height:100%;
+    padding: 10px 20px 10px 20px;
+    background-color: #212121;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border: 1px solid #7a7a7a;
+}
+
+#gameLogHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+#gameLogHeader h2 {
+    margin-bottom: 10px;
+    font-size:20px;
+}
+
+#messenger {
+    display: inline-block;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #7a7a7a;
+    border-radius: 3px 3px 0 0;
+    background-color: #1a1a1a;
+    font-size: 13px;
+    line-height: 15px;
+    overflow: scroll;
+    max-height: 100%;
+}
+
+#sendMessageField {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#sendMessageInput::-webkit-input-placeholder {
+    color: #6b6b6b;
+}
+
+#sendMessageInput:focus::-webkit-input-placeholder {
+    color: #969696;
+}
+
+#sendMessageInput:hover {
+    background-color: #404040
+}
+
+#sendMessageInput {
+    width: 100%;
+    height:20px;
+    font-size: 13px;
+    line-height: 20px;
+    border: none;
+    padding: 3px 10px 3px 5px;
+    border-radius: 0 0 0 2px;
+    background-color: #363636;
+    color: white;
+    -webkit-transition: background-color .25s;
+    -webkit-transition: color .25s;
+    -webkit-transition: height .25s;
+    resize: none;
+}
+
+#sendMessageInput:focus {
+    background-color: #4d4d4d;
+    outline: none;
+    height: 60px;
+}
+
+#sendMessageButton {
+    font-size: 12px;
+    background-color: #203f96;
+    color: white;
+    border: none;
+    border-radius: 0 0 2px 0;
+    line-height: 20px;
+    -webkit-transition: background-color .25s;
+}
+
+#sendMessageButton:hover {
+    background-color: #325bcf;
+}
+
+#sendMessageButton:focus {
+    outline: none;
+}
+
+#sendMessageButton:active {
+    background-color: #7a9cff;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.message svg {
+    fill: white;
+    width: 10px;
+    height: 10px;
+    padding-right: 10px;
+}
+
+.userMessage {}
+
+.userMessageContent {
+    margin-top: 3px;
+    margin-left: 20px;
+}
+
+.messagerUserName {
+    font-weight: 700;
+}
+
+.gameMessage {}
+
+.gameMessageSignificant {
+    background-color: #f03b00;
+    margin: 5px -10px 10px -10px;
+    padding: 10px;
+    display:flex;
+    
+}
+
+.gameMessageSignificant svg {
+}
+
+.gameMessageSignificant div {
+    display: inline-block;
+    text-wrap: wrap;
+    width: 100%;
+}
+
+.serverMessage {
+    
+}
+
+#gameID {
+    font-size: 13px;
+    padding-top: 10px;
+    color: #5c5c5c;
+}
+
+.row {
+    display: table;
+    table-layout: fixed;
+}
+
+.column {
+    display: table-cell;
+}
+    
+.column div button {
+    height: 50px;
+    width: 50px;
+    border-image: none;
+    border-color: 2px solid grey;
+    margin-right: 1px;
+    -webkit-transition: background-color .25s;
+    -webkit-transition: width .25s;
+    -webkit-transition: height .25s;
+}
+
+.column {
+    height: 50px;
+    width: 50px;
+}
+
+.column div button:hover {
+    background-color: #ededed;
+}
+
+.column div button:focus {
+    outline: none;
+}
+
+.column div button:active {
+    background-color: #cccccc;
+    border-style:solid;
+}
+
+/*KEYFRAME ANIMATIONS*/
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-7px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+
+/*MEDIA QUERIES*/
+
+/*Mobile*/
+
+@media only screen and (max-width: 700px), only screen and (max-height: 500px) {
+    .column div button {
+        height: 75px;
+        width: 75px;
+    }
+    .userMessage {
+        display: none;
+    }
+    #sendMessageField {
+        display:none;
+    }
+    #gameLog {
+        padding-bottom: 20px;
+    }
+}
