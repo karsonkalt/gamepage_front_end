@@ -290,6 +290,7 @@
 }
 
 .cell {
+    box-sizing: border-box;
     background-color: #e2e2e2;
     height: 50px;
     width: 50px;
@@ -308,10 +309,8 @@
     background-color: #fbfbfb;
 }
 
-
-
-.cell:hover {
-    background-color: #cccccc;
+.not-played:hover {
+    border: 2px solid #3464eb;
 }
 
 /*KEYFRAME ANIMATIONS*/

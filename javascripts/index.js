@@ -14,12 +14,21 @@ const cellArray = () => {
 const findCell = num => document.getElementById(`${num}`)
 
 
-const switchToBlack = element => {
-    element.classList.add("black")
+const switchToBlack = event => {
+    event.target.classList.add("black")
+}
+
+const switchToWhite = event => {
+    event.target.classList.add("black")
 }
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    // document.addEventListener("click", )
+    // findCell(1).addEventListener("click", () => {
+    //     console.log("Is this working.")
+    // })
+    cellArray().forEach(cellNumber => {
+        findCell(cellNumber).addEventListener("click", switchToBlack)
+    })
 })
