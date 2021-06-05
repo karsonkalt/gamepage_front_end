@@ -7,10 +7,6 @@ const addUserMessageToMessengerWithEnter = event => {
     }
 }
 
-var currentUserUsername = () => {
-    return "Black"
-}
-
 const addUserMessageToMessenger = event => {
     console.log("You attempted to enter chat.")
     const input = sendMessageTextArea().value.trim()

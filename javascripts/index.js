@@ -11,6 +11,10 @@ const cellArray = [
 
 const findCell = num => document.getElementById(`${num}`)
 
+var currentUserUsername = () => {
+    return "Black"
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     // findCell(1).addEventListener("click", () => {
     //     console.log("Is this working.")

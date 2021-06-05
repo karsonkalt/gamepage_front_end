@@ -1,11 +1,8 @@
 const newBoard = () => {
     fetch(root + "/board/new")
         .then(resp => resp.json())
-        .then(json => {
-            console.log("Sent GET to server and created a new board as a class variable on the server.")
-            console.log(json)
-        })
-}
+        .then(json => addInfoResponseToChat("A new game has started."))
+    }
 
 const flipColor = cellInfo => {
     if (cellInfo[1] === "black") {
@@ -33,9 +30,15 @@ const clickCell = event => {
     })
         .then(resp => resp.json())
         .then(json => {
-            console.log("Post request was sent to the server.")
+            const numFlipped = Object.keys(json).length - 1
+            if (numFlipped === 1) {
+                addInfoResponseToChat(`${currentUserUsername()} flipped ${numFlipped} token.`)
+            } else {
+                addInfoResponseToChat(`${currentUserUsername()} flipped ${numFlipped} tokens.`)
+            }
+
             Object.entries(json).forEach(cellInfo => {
-                flipColor(cellInfo)
+            flipColor(cellInfo)
             })
         })
         .catch(err => console.log(err))
