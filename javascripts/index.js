@@ -19,4 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
     cellArray.forEach(cellNumber => {
         findCell(cellNumber).addEventListener("click", clickCell)
     })
+    addMessengerEventListeners()
 })
