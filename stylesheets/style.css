@@ -296,20 +296,34 @@
     width: 50px;
     border-color: 1px solid grey;
     margin: 1px;
-    -webkit-transition: background-color .25s;
     -webkit-transition: width .25s;
     -webkit-transition: height .25s;
 }
 
 .black {
-    background-color: #1a1a1a;
+    animation-name: fill-black;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    /* transform-style: preserve-3d; */
 }
 
 .white {
-    background-color: #fbfbfb;
+    animation-name: fill-white;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transform-style: preserve-3d;
+}
+
+.not-played {
+    border: 2px solid #e2e2e2;
+    -webkit-transition: background-color .25s;
+    -webkit-transition: border .25s;
 }
 
 .not-played:hover {
+    background-color: #ced2e0;
     border: 2px solid #3464eb;
 }
 
@@ -323,6 +337,24 @@
     }
     100% {
         transform: translatey(0px);
+    }
+}
+
+@keyframes fill-black {
+    0% {
+        background-color: #e2e2e2;
+    }
+    100% {
+        background-color: #1a1a1a;
+    }
+}
+
+@keyframes fill-white {
+    0% {
+        background-color: #e2e2e2;
+    }
+    100% {
+        background-color: #fbfbfb;
     }
 }
 

@@ -40,9 +40,3 @@ const clickCell = event => {
         })
         .catch(err => console.log(err))
 }
-
-// This should be a post?
-// const play = () => {
-//     fetch(root + "/board")
-
-// }

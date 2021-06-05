@@ -11,28 +11,6 @@ const cellArray = [
 
 const findCell = num => document.getElementById(`${num}`)
 
-
-
-const switchToBlack = event => {
-    if (event.target.classList.contains("not-played")) {
-        event.target.classList.remove("not-played")
-        event.target.classList.add("black")
-    } else if (event.target.classList.contains("white")) {
-        event.target.classList.remove("white")
-        event.target.classList.add("black")
-    }
-}
-
-const switchToWhite = event => {
-    if (event.target.classList.contains("not-played")) {
-        event.target.classList.remove("not-played")
-        event.target.classList.add("white")
-    } else if (event.target.classList.contains("black")) {
-        event.target.classList.remove("black")
-        event.target.classList.add("white")
-    }
-}
-
 document.addEventListener("DOMContentLoaded", () => {
     // findCell(1).addEventListener("click", () => {
     //     console.log("Is this working.")
