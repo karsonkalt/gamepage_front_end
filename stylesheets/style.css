@@ -282,41 +282,36 @@
 }
 
 .row {
-    display: table;
-    table-layout: fixed;
+    display: flex;
 }
 
 .column {
     display: table-cell;
 }
-    
-.column div button {
+
+.cell {
+    background-color: #e2e2e2;
     height: 50px;
     width: 50px;
-    border-image: none;
-    border-color: 2px solid grey;
-    margin-right: 1px;
+    border-color: 1px solid grey;
+    margin: 1px;
     -webkit-transition: background-color .25s;
     -webkit-transition: width .25s;
     -webkit-transition: height .25s;
 }
 
-.column {
-    height: 50px;
-    width: 50px;
+.black {
+    background-color: #1a1a1a;
 }
 
-.column div button:hover {
-    background-color: #ededed;
+.white {
+    background-color: #fbfbfb;
 }
 
-.column div button:focus {
-    outline: none;
-}
 
-.column div button:active {
+
+.cell:hover {
     background-color: #cccccc;
-    border-style:solid;
 }
 
 /*KEYFRAME ANIMATIONS*/
