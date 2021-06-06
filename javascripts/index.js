@@ -9,10 +9,19 @@ const cellArray = [
     "8a", "8b", "8c", "8d", "8e", "8f", "8g", "8h"
 ]
 
+const userNames = [
+    "Black",
+    "White"
+]
+
 const findCell = num => document.getElementById(`${num}`)
 
 var currentUserUsername = () => {
-    return "Black"
+    if (numberOfTurns() % 2 == 0 ) {
+        return userNames[0]
+    } else {
+        return userNames[1]
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {

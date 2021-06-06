@@ -1,7 +1,10 @@
 const newBoard = () => {
     fetch(root + "/board/new")
         .then(resp => resp.json())
-        .then(json => addInfoResponseToChat("A new game has started."))
+        .then(json => {
+            addInfoResponseToChat("A new game has started.")
+            updateTurnIndicator()
+        })
     }
 
 const flipColor = cellInfo => {
@@ -30,16 +33,22 @@ const clickCell = event => {
     })
         .then(resp => resp.json())
         .then(json => {
-            const numFlipped = Object.keys(json).length - 1
-            if (numFlipped === 1) {
-                addInfoResponseToChat(`${currentUserUsername()} flipped ${numFlipped} token.`)
+            if (json.error) {
+                addSignificantResponseToChat("You can not play in this location.")
             } else {
-                addInfoResponseToChat(`${currentUserUsername()} flipped ${numFlipped} tokens.`)
-            }
+                const numFlipped = Object.keys(json).length - 1
+                if (numFlipped === 1) {
+                    addInfoResponseToChat(`${currentUserUsername()} flipped ${numFlipped} token.`)
+                } else {
+                    addInfoResponseToChat(`${currentUserUsername()} flipped ${numFlipped} tokens.`)
+                }
 
-            Object.entries(json).forEach(cellInfo => {
-            flipColor(cellInfo)
-            })
+                Object.entries(json).forEach(cellInfo => {
+                flipColor(cellInfo)
+                updateTurnIndicator()
+                endGameIfOver()
+                })
+            }
         })
         .catch(err => console.log(err))
 }
