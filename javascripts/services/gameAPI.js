@@ -2,7 +2,7 @@ const newBoard = () => {
     fetch(root + "/board/new")
         .then(resp => resp.json())
         .then(json => {
-            addInfoResponseToChat("A new game has started.")
+            addInfoResponseToChat("A new game has started")
             updateTurnIndicator()
         })
     }
@@ -37,7 +37,7 @@ const clickCell = event => {
                 shakeTurnIndicatorIfInvalidMove()
             } else {
                 const numFlipped = Object.keys(json).length - 1
-                if (numFlipped > 4) {
+                if (numFlipped >= 4) {
                     addInfoResponseToChat(`${currentUserUsername()} flipped ${numFlipped} tokens!`)
                 }
 

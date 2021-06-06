@@ -117,13 +117,13 @@
 
 .shake1 {
     animation-name: shake1;
-    animation-duration: .5s;
+    animation-duration: .3s;
     animation-iteration-count: 1;
 }
 
 .shake2 {
     animation-name: shake2;
-    animation-duration: .5s;
+    animation-duration: .3s;
     animation-iteration-count: 1;
 }
 
@@ -134,7 +134,7 @@
     display: block;
     padding: 15px;
     z-index: 2;
-    background-color: white;
+    background-color: #e2e2e2;
     margin-bottom: 20px;
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
 }
@@ -315,7 +315,7 @@
 
 .black {
     animation-name: fill-black;
-    animation-duration: .5s;
+    animation-duration: .3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     /* transform-style: preserve-3d; */
@@ -323,14 +323,15 @@
 
 .white {
     animation-name: fill-white;
-    animation-duration: .5s;
+    animation-duration: .3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     transform-style: preserve-3d;
 }
 
 .not-played {
-    border: 2px solid #e2e2e2;
+    border: 2px solid #cecece;
+    background-color: #cecece;
     -webkit-transition: background-color .25s;
     -webkit-transition: border .25s;
 }
