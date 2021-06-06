@@ -111,9 +111,22 @@
     z-index: 3;
     text-align: center;
     color: white;
-    animation: float 2s ease-in-out infinite;
+    /* animation: float 2s ease-in-out infinite; */
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
 }
+
+.shake1 {
+    animation-name: shake1;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+
+.shake2 {
+    animation-name: shake2;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+
 
 #gameContainer {
     border: 2px solid #757575;
@@ -329,33 +342,37 @@
 
 /*KEYFRAME ANIMATIONS*/
 @keyframes float {
-    0% {
-        transform: translatey(0px);
-    }
-    50% {
-        transform: translatey(-7px);
-    }
-    100% {
-        transform: translatey(0px);
-    }
+    0% { transform: translatey(0px); }
+    50% { transform: translatey(-7px); }
+    100% { transform: translatey(0px); }
+}
+
+@keyframes shake1 {
+    0% { transform: translate(10px); }
+    20% { transform: translate(-10px); }
+    40% { transform: translate(15px); }
+    60% { transform: translate(-15px); }
+    80% { transform: translate(8px); }
+    100% { transform: translate(0px); }
+}
+
+@keyframes shake2 {
+    0% { transform: translate(10px); }
+    20% { transform: translate(-10px); }
+    40% { transform: translate(15px); }
+    60% { transform: translate(-15px); }
+    80% { transform: translate(8px); }
+    100% { transform: translate(0px); }
 }
 
 @keyframes fill-black {
-    0% {
-        background-color: #e2e2e2;
-    }
-    100% {
-        background-color: #1a1a1a;
-    }
+    0% { background-color: #e2e2e2; }
+    100% { background-color: #1a1a1a; }
 }
 
 @keyframes fill-white {
-    0% {
-        background-color: #e2e2e2;
-    }
-    100% {
-        background-color: #fbfbfb;
-    }
+    0% { background-color: #e2e2e2; }
+    100% { background-color: #fbfbfb; }
 }
 
 

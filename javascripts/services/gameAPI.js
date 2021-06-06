@@ -34,13 +34,11 @@ const clickCell = event => {
         .then(resp => resp.json())
         .then(json => {
             if (json.error) {
-                addSignificantResponseToChat("You can not play in this location.")
+                shakeTurnIndicatorIfInvalidMove()
             } else {
                 const numFlipped = Object.keys(json).length - 1
-                if (numFlipped === 1) {
-                    addInfoResponseToChat(`${currentUserUsername()} flipped ${numFlipped} token.`)
-                } else {
-                    addInfoResponseToChat(`${currentUserUsername()} flipped ${numFlipped} tokens.`)
+                if (numFlipped > 4) {
+                    addInfoResponseToChat(`${currentUserUsername()} flipped ${numFlipped} tokens!`)
                 }
 
                 Object.entries(json).forEach(cellInfo => {
