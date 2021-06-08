@@ -9,7 +9,6 @@
 .container {
     width: 100vw;
     height: 100vh;
-    min-width: 700px;
     max-width: 1500px;
     min-height: 400px;
     display: flex;
@@ -77,9 +76,9 @@
 
 #screenSpace {
     display: flex;
+    align-items: stretch;
     width: 100%;
     height: 100%;
-    justify-content: space-between;
     background-color: #595959;
     background: 
   repeating-linear-gradient(
@@ -89,6 +88,8 @@
     #595959 5px,
     #595959 10px
   );
+    display: flex;
+    justify-content: center;
 }
 
 #leftScreenSpace {
@@ -127,7 +128,6 @@
     animation-iteration-count: 1;
 }
 
-
 #gameContainer {
     border: 2px solid #757575;
     border-radius:5px;
@@ -146,6 +146,7 @@
 #gameLog {
     margin: 15px;
     border-radius: 5px;
+    min-width: 200px;
     width: 300px;
     max-height:100%;
     padding: 10px 20px 10px 20px;
@@ -169,6 +170,7 @@
 }
 
 #messenger {
+    flex-grow: auto;
     display: inline-block;
     height: 100%;
     padding: 10px;
@@ -309,8 +311,6 @@
     width: 50px;
     border-color: 1px solid grey;
     margin: 1px;
-    -webkit-transition: width .25s;
-    -webkit-transition: height .25s;
 }
 
 .black {
@@ -339,6 +339,101 @@
 .not-played:hover {
     background-color: #ced2e0;
     border: 2px solid #3464eb;
+}
+
+#gameListContainer {
+    border: 2px solid #757575;
+    border-radius:5px;
+    display: block;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    min-width: 400px;
+}
+
+.gameChoice {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 30px;
+    margin: 5px 0 5px 0;
+    font-size: 18px;
+    padding: 10px;
+    color:#3b3b3b;
+    border-radius: 0 3px 3px 0;
+    text-decoration:none;
+    -webkit-transition: background-color .25s;
+    -webkit-transition: padding-left .25s;
+}
+
+.gameChoice svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 20px;
+}
+
+.gameChoice:first-child {
+    margin-top: 0;
+}
+
+.gameChoice:last-child {
+    margin-bottom: 0;
+}
+
+.activeChoice svg {
+    fill: #3b3b3b;
+}
+
+.inactiveChoice svg {
+    fill: #d6d6d6;
+}
+
+.activeChoice:hover {
+    color: #3464eb;
+    border-left: 2px solid #3464eb;
+    padding-left: 20px;
+    background-color:#f2f2f2;
+}
+
+.svgHighlight, .svgBackground {
+    -webkit-transition: fill .15s;
+}
+
+.activeChoice:hover svg .svgHighlight {
+    fill: #3464eb;
+}
+
+.activeChoice:hover svg .svgBackground {
+    fill: #aebde8;
+}
+
+.inactiveChoice {
+    color:#d6d6d6;
+}
+
+.inactiveChoice:hover {
+}
+
+.playerNumber {
+    border-radius: 20px;
+    padding: 7px 10px;
+    line-height:10px;
+    font-size:10px;
+    color:white;
+    -webkit-transition: background-color .25s;
+}
+
+.activeChoice .playerNumber {
+    background-color: #999999;
+}
+
+.inactiveChoice .playerNumber {
+    background-color: #e8e8e8;
+}
+
+.activeChoice:hover .playerNumber {
+    background-color: #3464eb;
 }
 
 /*KEYFRAME ANIMATIONS*/
@@ -381,18 +476,22 @@
 
 /*Mobile*/
 
+@media only screen and (max-width: 800px), only screen and (max-height: 500px) {
+    .cell {
+        height: 40px;
+        width: 40px;
+    }
+}
+
 @media only screen and (max-width: 700px), only screen and (max-height: 500px) {
-    .column div button {
-        height: 75px;
-        width: 75px;
+    .cell {
+        height: 35px;
+        width: 35px;
     }
-    .userMessage {
-        display: none;
-    }
-    #sendMessageField {
-        display:none;
-    }
+}
+
+@media only screen and (max-width: 600px), only screen and (max-height: 500px) {
     #gameLog {
-        padding-bottom: 20px;
+        display: none;
     }
 }

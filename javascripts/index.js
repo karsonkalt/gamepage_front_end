@@ -9,12 +9,12 @@ const cellArray = [
     "8a", "8b", "8c", "8d", "8e", "8f", "8g", "8h"
 ]
 
+const findCell = num => document.getElementById(`${num}`)
+
 const userNames = [
     "Black",
     "White"
 ]
-
-const findCell = num => document.getElementById(`${num}`)
 
 var currentUserUsername = () => {
     if (numberOfTurns() % 2 == 0 ) {
