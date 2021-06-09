@@ -27,9 +27,5 @@ var currentUserUsername = () => {
 document.addEventListener("DOMContentLoaded", () => {
     // This needs to be broken into different parts and not all fire when DOMContentLoaded
     addLoginDiv()
-    newBoard()
-    cellArray.forEach(cellNumber => {
-        findCell(cellNumber).addEventListener("click", clickCell)
-    })
-    addMessengerEventListeners()
+    addMainMenuDiv()
 })

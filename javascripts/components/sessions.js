@@ -1,12 +1,9 @@
 const loginContainer = () => document.querySelector("#loginContainer")
 const loginInputValue = () => document.querySelector("#loginInput").value
 const loginButton = () => document.querySelector("#loginButton")
-const playSpace = () => document.querySelector("#playSpace")
 
 const header = () => document.querySelector("#header")
 const logoutButton = () => document.querySelector("#logout")
-
-const playReversiLink = () => document.querySelector("#playReversiLink")
 
 const addLogoutButton = () => {
     const a = document.createElement("a")
@@ -55,9 +52,4 @@ const displayWelcomeMessage = username => {
     loginContainer().innerHTML = `
         <p id="welcomeMessage">Welcome ${username}</p>
     `
-}
-
-const activatePlayReversiLink = () => {
-    playReversiLink().classList.remove("inactiveChoice")
-    playReversiLink().classList.add("activeChoice")
 }
