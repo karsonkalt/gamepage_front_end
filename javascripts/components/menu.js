@@ -1,0 +1,1 @@
+const mainMenu = () => document.querySelector("#gameListContainer")

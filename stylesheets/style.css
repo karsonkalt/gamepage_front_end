@@ -26,6 +26,20 @@
     background-color: #212121;
 }
 
+#sessionInfo {
+    display: flex;
+    margin:auto 15px auto 0;
+    color:#636363;
+    padding:6px 10px 0 0;
+    transition: color .25s;
+    font-size:13px;
+}
+
+#username {
+    /* margin-top: 6px;
+    margin-right: 20px; */
+}
+
 #pageTitle h1 {
     color: white;
     font-size: 20px;
@@ -397,6 +411,13 @@
     font-size: 14px;
 }
 
+#welcomeMessage {
+    color: #c5c5c5;
+    padding: 0 10px;
+    margin: 0;
+    font-size: 14px;
+}
+
 #loginField {
     margin-left: 10px;
     margin-bottom: 10px;
@@ -456,6 +477,13 @@
 
 #loginButton:active {
     background-color: #7a9cff;
+}
+
+.loginError {
+    color: #c5c5c5;
+    padding-left: 10px;
+    margin: 10px 0;
+    font-size: 14px;
 }
 
 #gameListContainer {

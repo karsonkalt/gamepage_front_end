@@ -6,6 +6,8 @@ const playSpace = () => document.querySelector("#playSpace")
 const header = () => document.querySelector("#header")
 const logoutButton = () => document.querySelector("#logout")
 
+const playReversiLink = () => document.querySelector("#playReversiLink")
+
 const addLogoutButton = () => {
     const a = document.createElement("a")
         a.id = "logout"
@@ -36,4 +38,26 @@ const addLoginDiv = () => {
         const parent = playSpace()
         parent.prepend(div)
         loginButton().addEventListener("click", clickLogin)
+}
+
+const addErrorMessage = errorObj => {
+    const p = document.createElement("p")
+        p.classList.add("loginError")
+        p.innerText = `
+            ${errorObj["errors"]}
+        `
+        const parent = loginContainer()
+        parent.appendChild(p)
+
+}
+
+const displayWelcomeMessage = username => {
+    loginContainer().innerHTML = `
+        <p id="welcomeMessage">Welcome ${username}</p>
+    `
+}
+
+const activatePlayReversiLink = () => {
+    playReversiLink().classList.remove("inactiveChoice")
+    playReversiLink().classList.add("activeChoice")
 }
