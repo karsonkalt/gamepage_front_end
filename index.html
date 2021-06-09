@@ -4,10 +4,12 @@
 <head>
     <meta charset="utf-8">
     <title>GamePage</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     <script src="javascripts/index.js"></script>
     <script src="javascripts/components/sessions.js"></script>
+    <script src="javascripts/components/menu.js"></script>
     <script src="javascripts/components/game.js"></script>
     <script src="javascripts/components/messenger.js"></script>
     <script src="javascripts/services/root.js"></script>
@@ -21,122 +23,10 @@
         <div id="header">
             <div id="pageTitle">
                 <h1>GAMEPAGE</h1>
-                <h2>Reversi</h2>
             </div>
-            <a href="../index.html" id="leaveGame">
-                <div>EXIT GAME</div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path
-                        d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z" />
-                </svg>
-            </a>
         </div>
         <div id="screenSpace">
-            <div id="leftScreenSpace">
-                <div id="playSpace">
-                    <div id="gameContainer" class="active">
-
-                        <div>
-                            <div class="row">
-                                <div id="1a" class="cell not-played"></div>
-                                <div id="1b" class="cell not-played"></div>
-                                <div id="1c" class="cell not-played"></div>
-                                <div id="1d" class="cell not-played"></div>
-                                <div id="1e" class="cell not-played"></div>
-                                <div id="1f" class="cell not-played"></div>
-                                <div id="1g" class="cell not-played"></div>
-                                <div id="1h" class="cell not-played"></div>
-                            </div>
-                            <div class="row">
-                                <div id="2a" class="cell not-played"></div>
-                                <div id="2b" class="cell not-played"></div>
-                                <div id="2c" class="cell not-played"></div>
-                                <div id="2d" class="cell not-played"></div>
-                                <div id="2e" class="cell not-played"></div>
-                                <div id="2f" class="cell not-played"></div>
-                                <div id="2g" class="cell not-played"></div>
-                                <div id="2h" class="cell not-played"></div>
-                            </div>
-                            <div class="row">
-                                <div id="3a" class="cell not-played"></div>
-                                <div id="3b" class="cell not-played"></div>
-                                <div id="3c" class="cell not-played"></div>
-                                <div id="3d" class="cell not-played"></div>
-                                <div id="3e" class="cell not-played"></div>
-                                <div id="3f" class="cell not-played"></div>
-                                <div id="3g" class="cell not-played"></div>
-                                <div id="3h" class="cell not-played"></div>
-                            </div>
-                            <div class="row">
-                                <div id="4a" class="cell not-played"></div>
-                                <div id="4b" class="cell not-played"></div>
-                                <div id="4c" class="cell not-played"></div>
-                                <div id="4d" class="cell white"></div>
-                                <div id="4e" class="cell black"></div>
-                                <div id="4f" class="cell not-played"></div>
-                                <div id="4g" class="cell not-played"></div>
-                                <div id="4h" class="cell not-played"></div>
-                            </div>
-                            <div class="row">
-                                <div id="5a" class="cell not-played"></div>
-                                <div id="5b" class="cell not-played"></div>
-                                <div id="5c" class="cell not-played"></div>
-                                <div id="5d" class="cell black"></div>
-                                <div id="5e" class="cell white"></div>
-                                <div id="5f" class="cell not-played"></div>
-                                <div id="5g" class="cell not-played"></div>
-                                <div id="5h" class="cell not-played"></div>
-                            </div>
-                            <div class="row">
-                                <div id="6a" class="cell not-played"></div>
-                                <div id="6b" class="cell not-played"></div>
-                                <div id="6c" class="cell not-played"></div>
-                                <div id="6d" class="cell not-played"></div>
-                                <div id="6e" class="cell not-played"></div>
-                                <div id="6f" class="cell not-played"></div>
-                                <div id="6g" class="cell not-played"></div>
-                                <div id="6h" class="cell not-played"></div>
-                            </div>
-                            <div class="row">
-                                <div id="7a" class="cell not-played"></div>
-                                <div id="7b" class="cell not-played"></div>
-                                <div id="7c" class="cell not-played"></div>
-                                <div id="7d" class="cell not-played"></div>
-                                <div id="7e" class="cell not-played"></div>
-                                <div id="7f" class="cell not-played"></div>
-                                <div id="7g" class="cell not-played"></div>
-                                <div id="7h" class="cell not-played"></div>
-                            </div>
-                            <div class="row">
-                                <div id="8a" class="cell not-played"></div>
-                                <div id="8b" class="cell not-played"></div>
-                                <div id="8c" class="cell not-played"></div>
-                                <div id="8d" class="cell not-played"></div>
-                                <div id="8e" class="cell not-played"></div>
-                                <div id="8f" class="cell not-played"></div>
-                                <div id="8g" class="cell not-played"></div>
-                                <div id="8h" class="cell not-played"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div id="turnIndicator"></div>
-                </div>
-            </div>
-
-            <div id="gameLog">
-                <div id="gameLogHeader">
-                    <h2>GameLog</h2>
-                    <div id="gameID">Game 1234</div>
-                </div>
-                <div id="messenger">
-                    <div style="border: 1px;">
-                    </div>
-                </div>
-                <div id="sendMessageField">
-                    <textarea placeholder="Chat" rows="1" cols="1" wrap="soft" id="sendMessageInput" type="field"></textarea>
-                    <button id="sendMessageButton">Send</button>
-                </div>
+            <div id="playSpace">
             </div>
         </div>
     </div>
