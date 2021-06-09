@@ -47,7 +47,6 @@
     margin:auto 15px auto 0;
     display:flex;
     text-decoration: none;
-    
 }
 
 #leaveGame div {
@@ -71,6 +70,36 @@
 }
 
 #leaveGame:hover div {
+    color: #e3e3e3;
+}
+
+#logout {
+    margin:auto 15px auto 0;
+    display:flex;
+    text-decoration: none;
+}
+
+#logout div {
+    color:#636363;
+    padding:6px 10px 0 0;
+    transition: color .25s;
+    font-size:13px;
+}
+
+#logout svg {
+    fill:#636363;
+    height:20px;
+    width:20px;
+    padding-right:10px;
+    transition: fill .25s;
+    margin: 3px 0 0 0;
+}
+
+#logout:hover svg {
+    fill:#e3e3e3;
+}
+
+#logout:hover div {
     color: #e3e3e3;
 }
 
@@ -339,6 +368,94 @@
 .not-played:hover {
     background-color: #ced2e0;
     border: 2px solid #3464eb;
+}
+
+#loginContainer {
+    width: 400px;
+    border: 2px solid #757575;
+    border-radius:5px;
+    display: block;
+    padding: 15px;
+    background-color: #212121;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    min-width: 400px;
+    margin-bottom: 20px;
+}
+
+#loginTitle {
+    color: white;
+    padding-left: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+#loginInfo {
+    color: #c5c5c5;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+#loginField {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+#loginField::-webkit-input-placeholder {
+    color: #6b6b6b;
+}
+
+#loginInput:focus::-webkit-input-placeholder {
+    color: #969696;
+}
+
+#loginInput:hover {
+    background-color: #404040
+}
+
+#loginInput {
+    height:25px;
+    font-size: 14px;
+    line-height: 20px;
+    border: none;
+    padding: 2px 10px;
+    border-radius: 4px 0 0 4px;
+    background-color: #363636;
+    color: white;
+    -webkit-transition: background-color .25s;
+    -webkit-transition: color .25s;
+    resize: none;
+}
+
+#loginInput:focus {
+    background-color: #4d4d4d;
+    outline: none;
+}
+
+#loginButton {
+    padding: 2px 10px;
+    font-size: 14px;
+    background-color: #203f96;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    line-height: 20px;
+    -webkit-transition: background-color .25s;
+}
+
+#loginButton:hover {
+    background-color: #325bcf;
+}
+
+#loginButton:focus {
+    outline: none;
+}
+
+#loginButton:active {
+    background-color: #7a9cff;
 }
 
 #gameListContainer {
