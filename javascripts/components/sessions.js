@@ -1,6 +1,7 @@
 const loginContainer = () => document.querySelector("#loginContainer")
 const loginInputValue = () => document.querySelector("#loginInput").value
 const loginButton = () => document.querySelector("#loginButton")
+const loginField = () => document.querySelector("#loginField")
 const loginError = () => document.querySelector(".loginError")
 const header = () => document.querySelector("#header")
 const logoutButton = () => document.querySelector("#logout")
@@ -35,6 +36,13 @@ const addLoginDiv = () => {
         const parent = playSpace()
         parent.prepend(div)
         loginButton().addEventListener("click", clickLogin)
+        loginField().addEventListener("keypress", addLoginWithEnter)
+}
+
+const addLoginWithEnter = event => {
+    if (event.key === "Enter") {
+        clickLogin()
+    }
 }
 
 const addErrorMessage = errorObj => {

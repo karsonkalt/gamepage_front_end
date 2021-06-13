@@ -16,5 +16,4 @@ var currentUserUsername = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     addLoginDiv()
-    addMainMenuDiv()
 })

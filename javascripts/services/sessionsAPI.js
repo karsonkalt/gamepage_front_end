@@ -17,7 +17,7 @@ const clickLogin = event => {
         } else {
             displayWelcomeMessage(json.username)
             addLogoutButton()
-            activatePlayReversiLink()
+            addMainMenuDiv()
             currentUsername = json.username
         }
     })
@@ -29,7 +29,7 @@ const clickLogout = event => {
         .then(resp => resp.json())
         .then(json => {
             logoutButton().remove()
-            loginContainer().remove()
+            clearScreen()
             addLoginDiv()
             currentUsername = ""
             console.log("successfully logged out.")
