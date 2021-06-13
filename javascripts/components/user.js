@@ -1,14 +1,18 @@
 const topUserContainer = () => document.querySelector("#topUserContainer")
 
 const addAllTopUserDivs = json => {
-    const div = document.createElement("div")
-    div.id = "topUserContainer"
-    const parent = playSpace()
-    parent.appendChild(div)
+    if (topUserContainer() != null) {
+        topUserContainer().remove()
+    } else {
+        const div = document.createElement("div")
+        div.id = "topUserContainer"
+        const parent = playSpace()
+        parent.appendChild(div)
 
-    Object.entries(json).forEach(userObject => {
-        addTopUser(userObject[1])
-    })
+        Object.entries(json).forEach(userObject => {
+            addTopUser(userObject[1])
+        })
+    }
 }
 
 const addTopUser = userObject => {
@@ -16,6 +20,7 @@ const addTopUser = userObject => {
     div.classList.add("topUser")
     div.innerHTML = `
         ${userObject.user.username}
+        <div class="gamesPlayed">Games Played: ${userObject.games_played}</div>
         <div class="averageScore">Average Score: ${userObject.average_score}</div>
     `
     const parent = topUserContainer()

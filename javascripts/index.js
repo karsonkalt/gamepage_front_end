@@ -1,12 +1,12 @@
 const root = "http://localhost:3000"
 
-var currentUsername = ""
+let currentUsername = ""
 
 const userNames = () => {
     return [currentUsername, "opponent"]
 }
 
-var currentUserUsername = () => {
+let currentUserUsername = () => {
     if (numberOfTurns() % 2 == 0 ) {
         return userNames()[0]
     } else {
