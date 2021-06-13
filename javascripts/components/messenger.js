@@ -32,8 +32,3 @@ const addSignificantResponseToChat = response => {
     const parent = document.querySelector("#messenger div")
     parent.appendChild(div)
 }
-
-const addMessengerEventListeners = () => {
-    sendMessageTextArea().addEventListener("keydown", addUserMessageToMessengerWithEnter)
-    sendMessageButton().addEventListener("click", addUserMessageToMessenger)
-}

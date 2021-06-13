@@ -17,6 +17,15 @@ const updateTurnIndicator = () => {
     turnIndicator().innerText = `${currentUserUsername()}'s turn`
 }
 
+const transormTurnIndicatorIntoPlayAgainButton = () => {
+    turnIndicator().classList.remove("turn")
+    turnIndicator().classList.add("gameOver")
+    turnIndicator().innerHTML = `
+        <a href="#">Play again</a>
+    `
+    turnIndicator().addEventListener("click", startGame)
+}
+
 const shakeTurnIndicatorIfInvalidMove = () => {
     if (turnIndicator().classList.contains("shake1")) {
         turnIndicator().classList.remove("shake1")
@@ -80,7 +89,7 @@ const endGameIfOver = () => {
         } else {
             addSignificantResponseToChat(`The game was a tie!`)
         }
-        console.log(`Score: ${winnerNumberOfTokens()}`)
-        sendScoreToServer()
+        sendScoreToServer(winner(), winnerNumberOfTokens())
+        transormTurnIndicatorIntoPlayAgainButton()
     }
 }

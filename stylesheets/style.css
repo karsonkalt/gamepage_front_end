@@ -151,12 +151,29 @@
     line-height: 30px;
     width: 160px;
     border-radius: 20px;
-    background-color: #3464eb;
     z-index: 3;
     text-align: center;
     color: white;
-    /* animation: float 2s ease-in-out infinite; */
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
+    transition: background-color 1s;
+    transition: padding .1s;
+}
+
+.turn {
+    background-color: #3464eb;
+}
+
+.gameOver {
+    background-color: #f03b00;
+}
+
+.gameOver a {
+    text-decoration: none;
+    color: white;
+}
+
+.gameOver:hover {
+    padding: 5px;
 }
 
 .shake1 {
@@ -619,7 +636,7 @@
 /*KEYFRAME ANIMATIONS*/
 @keyframes float {
     0% { transform: translatey(0px); }
-    50% { transform: translatey(-7px); }
+    50% { transform: translatey(-10px); }
     100% { transform: translatey(0px); }
 }
 

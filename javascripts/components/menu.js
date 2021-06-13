@@ -113,14 +113,13 @@ const startGame = () => {
                     </div>
                 </div>
             </div>
-            <div id="turnIndicator"></div>
+            <div id="turnIndicator" class="turn"></div>
         </div>
     </div>
 
         <div id="gameLog">
             <div id="gameLogHeader">
                 <h2>GameLog</h2>
-                <div id="gameID">Game 1234</div>
             </div>
             <div id="messenger">
                 <div style="border: 1px;">
@@ -133,7 +132,6 @@ const startGame = () => {
     cellArray.forEach(cellNumber => {
         findCell(cellNumber).addEventListener("click", clickCell)
     })
-    addMessengerEventListeners()
 }
 
 const clearScreen = () => {
