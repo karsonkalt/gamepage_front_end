@@ -1,7 +1,7 @@
 const loginContainer = () => document.querySelector("#loginContainer")
 const loginInputValue = () => document.querySelector("#loginInput").value
 const loginButton = () => document.querySelector("#loginButton")
-
+const loginError = () => document.querySelector(".loginError")
 const header = () => document.querySelector("#header")
 const logoutButton = () => document.querySelector("#logout")
 

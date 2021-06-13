@@ -10,12 +10,15 @@ const clickLogin = event => {
     .then(resp => resp.json())
     .then(json => {
         if (json["errors"]) {
+            if (loginError()) {
+                loginError().remove()
+            }
             addErrorMessage(json)
         } else {
             displayWelcomeMessage(json.username)
             addLogoutButton()
             activatePlayReversiLink()
-            console.log(json)
+            currentUsername = json.username
         }
     })
     .catch(err => console.log(err))
@@ -26,7 +29,9 @@ const clickLogout = event => {
         .then(resp => resp.json())
         .then(json => {
             logoutButton().remove()
+            loginContainer().remove()
             addLoginDiv()
+            currentUsername = ""
             console.log("successfully logged out.")
         })
     }
