@@ -19,6 +19,7 @@ const clickLogin = event => {
             addLogoutButton()
             addMainMenuDiv()
             currentUsername = json.username
+            currentUserId = json.id
         }
     })
     .catch(err => console.log(err))
