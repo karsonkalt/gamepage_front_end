@@ -2,6 +2,7 @@ const mainMenu = () => document.querySelector("#gameListContainer")
 const playSpace = () => document.querySelector("#playSpace")
 const playReversiLink = () => document.querySelector("#playReversiLink")
 const leaderboardLink = () => document.querySelector("#leaderboardLink")
+const myScoresLink = () => document.querySelector("#myScoresLink")
 const screenSpace = () => document.querySelector("#screenSpace")
 
 const addMainMenuDiv = () => {
@@ -152,4 +153,5 @@ const clearScreen = () => {
 const addMainMenuEventListeners = () => {
     playReversiLink().addEventListener("click", startGame)
     leaderboardLink().addEventListener("click", getTopUsers)
+    myScoresLink().addEventListener("click", getCurrentUserScores)
 }

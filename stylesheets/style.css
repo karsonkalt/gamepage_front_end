@@ -503,6 +503,42 @@
     font-size: 14px;
 }
 
+#userScoresContainer {
+    color: #c5c5c5;
+    width: 400px;
+    border: 2px solid #757575;
+    border-radius: 5px;
+    background-color: #212121;
+    padding: 15px;
+    display: block;
+    padding: 15px;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    min-width: 400px;
+    margin-top: 20px;
+}
+
+.userScore {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 30px;
+    margin: 5px 0 5px 0;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 0 3px 3px 0;
+    text-decoration:none;
+}
+
+.gameScore {
+    border-radius: 20px;
+    padding: 7px 10px;
+    line-height:10px;
+    font-size:10px;
+    color: white;
+    background-color: #3464eb;
+}
+
 #topUserContainer {
     color: #c5c5c5;
     width: 400px;

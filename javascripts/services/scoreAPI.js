@@ -1,5 +1,5 @@
 const sendScoreToServer = (winnerUsername, score) => {
-    fetch(root + "/score/", {
+    fetch(root + "/scores/", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -15,11 +15,12 @@ const sendScoreToServer = (winnerUsername, score) => {
 }
 
 const getCurrentUserScores = () => {
-    fetch(root + "/user/" + currentUserId + "/scores")
+    fetch(root + "/users/" + currentUserId + "/scores")
         .then(resp => resp.json())
         .then(json => {
             // Do something here to show the user.
-            console.log(json)
+            // console.log(json)
+            addAllUserScoreDivs(json)
         }) 
 
 }
