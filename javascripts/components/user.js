@@ -4,6 +4,9 @@ const addAllTopUserDivs = json => {
     if (topUserContainer() != null) {
         topUserContainer().remove()
     } else {
+        if (userScoresContainer() != null) {
+            userScoresContainer().remove()
+        }
         const div = document.createElement("div")
         div.id = "topUserContainer"
         const parent = playSpace()

@@ -516,6 +516,8 @@
     flex-direction: column;
     min-width: 400px;
     margin-top: 20px;
+    max-height: 200px;
+    overflow: scroll;
 }
 
 .userScore {
@@ -552,6 +554,8 @@
     flex-direction: column;
     min-width: 400px;
     margin-top: 20px;
+    max-height: 200px;
+    overflow: scroll;
 }
 
 .topUser {
