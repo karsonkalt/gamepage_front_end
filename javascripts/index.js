@@ -1,11 +1,13 @@
 const root = "http://localhost:3000"
 
 let currentUsername = ""
-
 let currentUserId = ""
 
+let opponentUsername = ""
+let opponentUserId = ""
+
 const userNames = () => {
-    return [currentUsername, "opponent"]
+    return [currentUsername, opponentUsername]
 }
 
 let currentUserUsername = () => {

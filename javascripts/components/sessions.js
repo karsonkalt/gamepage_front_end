@@ -45,6 +45,12 @@ const addLoginWithEnter = event => {
     }
 }
 
+const addOpponentLoginWithEnter = event => {
+    if (event.key === "Enter") {
+        clickOpponentLogin()
+    }
+}
+
 const addErrorMessage = errorObj => {
     const p = document.createElement("p")
         p.classList.add("loginError")
@@ -60,4 +66,23 @@ const displayWelcomeMessage = username => {
     loginContainer().innerHTML = `
         <p id="welcomeMessage">Welcome ${username}</p>
     `
+}
+
+const addOpponentLoginDiv = () => {
+    clearScreen()
+    const div = document.createElement("div")
+        div.id = "loginContainer"
+        div.innerHTML = `
+        <h2 id="loginTitle">To play a game, your opponent must log in below.</h2>
+        <p id="loginInfo">If you don't have an account, please enter a username and an account will be created for you.</p>
+
+        <div id="loginField">
+            <input placeholder="Username" rows="1" cols="1" id="loginInput" type="text">
+            <button id="loginButton">Login</button>
+        </div>
+        `
+        const parent = playSpace()
+        parent.prepend(div)
+        loginButton().addEventListener("click", clickOpponentLogin)
+        loginField().addEventListener("keypress", addOpponentLoginWithEnter)
 }
