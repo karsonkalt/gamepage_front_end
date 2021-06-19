@@ -146,5 +146,5 @@ const clearScreen = () => {
 const addMainMenuEventListeners = () => {
     playReversiLink().addEventListener("click", addOpponentLoginDiv)
     leaderboardLink().addEventListener("click", getTopUsers)
-    myScoresLink().addEventListener("click", getCurrentUserScores)
+    myScoresLink().addEventListener("click", ScoreAPI.getCurrentUserScores)
 }
