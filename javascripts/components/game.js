@@ -73,12 +73,18 @@ class Game {
     static endGameIfOver() {
         if (this.isGameOver() == true) {
             if (this.winner()) {
-                addSignificantResponseToChat(`${this.winner()} won the game with ${this.winnerNumberOfTokens()} tokens on the board!`)
+                Messenger.addSignificantResponseToChat(`${this.winner()} won the game with ${this.winnerNumberOfTokens()} tokens on the board!`)
             } else {
-                addSignificantResponseToChat(`The game was a tie!`)
+                Messenger.addSignificantResponseToChat(`The game was a tie!`)
             }
             ScoreAPI.sendScoreToServer(this.winner(), this.winnerNumberOfTokens())
             this.transormTurnIndicatorIntoPlayAgainButton()
         }
+    }
+
+    // Instance Methods
+    constructor(cells, winner) {
+        this.cells = cells
+        this.winner = winner
     }
 }
