@@ -28,11 +28,9 @@ class Score {
         parent.appendChild(div)
     }
     
-
     // Instance Methods
     constructor(points, createdAt) {
         this.points = points
         this.createdAt = createdAt
     }
-
 }
