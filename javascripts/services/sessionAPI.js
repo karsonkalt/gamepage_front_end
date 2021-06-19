@@ -18,7 +18,7 @@ class SessionAPI {
             } else {
                 Session.displayWelcomeMessage(json.username)
                 Session.addLogoutButton()
-                addMainMenuDiv()
+                Menu.addMainMenuDiv()
                 currentUsername = json.username
                 currentUserId = json.id
             }
@@ -31,7 +31,7 @@ class SessionAPI {
             .then(resp => resp.json())
             .then(json => {
                 logoutButton().remove()
-                clearScreen()
+                Menu.clearScreen()
                 Session.addLoginDiv()
                 currentUsername = ""
         })
@@ -63,7 +63,7 @@ class SessionAPI {
                 opponentUsername = json.username
                 opponentUserId = json.id
                 // Start the game
-                startGame()
+                Menu.startGame()
             }
         })
         .catch(err => console.log(err))

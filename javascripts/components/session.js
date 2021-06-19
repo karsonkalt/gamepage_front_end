@@ -61,7 +61,7 @@ class Session {
     }
 
     static addOpponentLoginDiv() {
-        clearScreen()
+        Menu.clearScreen()
         const div = document.createElement("div")
         div.id = "loginContainer"
         div.innerHTML = `
