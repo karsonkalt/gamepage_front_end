@@ -13,7 +13,7 @@ class Game {
         turnIndicator().innerHTML = `
             <a href="#">Play again</a>
         `
-        turnIndicator().addEventListener("click", startGame)
+        turnIndicator().addEventListener("click", Menu.startGame)
     }
 
     static shakeTurnIndicatorIfInvalidMove() {
