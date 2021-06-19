@@ -11,8 +11,6 @@ const cellArray = [
 
 const findCell = num => document.getElementById(`${num}`)
 
-const turnIndicator = () => document.querySelector("#turnIndicator")
-
 const updateTurnIndicator = () => {
     turnIndicator().innerText = `${currentUserUsername()}'s turn`
 }

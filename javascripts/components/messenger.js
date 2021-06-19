@@ -1,6 +1,3 @@
-const sendMessageTextArea = () => document.querySelector("#sendMessageField textarea")
-const sendMessageButton = () => document.querySelector("#sendMessageField button")
-
 const addUserMessageToMessengerWithEnter = event => {
     if (event.key === "Enter") {
         addUserMessageToMessenger()

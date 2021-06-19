@@ -1,11 +1,3 @@
-const loginContainer = () => document.querySelector("#loginContainer")
-const loginInputValue = () => document.querySelector("#loginInput").value
-const loginButton = () => document.querySelector("#loginButton")
-const loginField = () => document.querySelector("#loginField")
-const loginError = () => document.querySelector(".loginError")
-const header = () => document.querySelector("#header")
-const logoutButton = () => document.querySelector("#logout")
-
 const addLogoutButton = () => {
     const a = document.createElement("a")
         a.id = "logout"
@@ -73,8 +65,8 @@ const addOpponentLoginDiv = () => {
     const div = document.createElement("div")
         div.id = "loginContainer"
         div.innerHTML = `
-        <h2 id="loginTitle">To play a game, your opponent must log in below.</h2>
-        <p id="loginInfo">If you don't have an account, please enter a username and an account will be created for you.</p>
+        <h2 id="loginTitle">To play a game, please have your opponent log in below.</h2>
+        <p id="loginInfo">If your opponent doesn't have an account, please enter a username and an account will be created for you.</p>
 
         <div id="loginField">
             <input placeholder="Username" rows="1" cols="1" id="loginInput" type="text">

@@ -1,5 +1,3 @@
-const userScoresContainer = () => document.querySelector("#userScoresContainer")
-
 const addAllUserScoreDivs = json => {
     if (userScoresContainer() != null) {
         userScoresContainer().remove()

@@ -1,5 +1,3 @@
-const topUserContainer = () => document.querySelector("#topUserContainer")
-
 const addAllTopUserDivs = json => {
     if (topUserContainer() != null) {
         topUserContainer().remove()
