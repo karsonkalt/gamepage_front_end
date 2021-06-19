@@ -130,9 +130,9 @@ const startGame = () => {
         </div>
     </div>
     `
-    newBoard()
+    GameAPI.newBoard()
     cellArray.forEach(cellNumber => {
-        findCell(cellNumber).addEventListener("click", clickCell)
+        Game.findCell(cellNumber).addEventListener("click", GameAPI.clickCell)
     })
 }
 
@@ -144,7 +144,7 @@ const clearScreen = () => {
 }
 
 const addMainMenuEventListeners = () => {
-    playReversiLink().addEventListener("click", addOpponentLoginDiv)
+    playReversiLink().addEventListener("click", Session.addOpponentLoginDiv)
     leaderboardLink().addEventListener("click", UserAPI.getTopUsers)
     myScoresLink().addEventListener("click", ScoreAPI.getCurrentUserScores)
 }

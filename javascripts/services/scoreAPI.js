@@ -10,8 +10,6 @@ class ScoreAPI {
         })
             .then(resp => resp.json())
             .then(json => {
-                // Do something here to show the user.
-                console.log(json)
             })
     }
 
