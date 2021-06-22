@@ -1,0 +1,19 @@
+{
+  "name": "gamepage_front_end",
+  "version": "1.0.0",
+  "description": "Front end of GamePage",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karsonkalt/gamepage_front_end.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "karsonkalt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karsonkalt/gamepage_front_end/issues"
+  },
+  "homepage": "https://github.com/karsonkalt/gamepage_front_end#readme"
+}
