@@ -8,9 +8,6 @@ class ScoreAPI {
             },
             body: JSON.stringify({username: winnerUsername, score: score})
         })
-            .then(resp => resp.json())
-            .then(json => {
-            })
     }
 
     static getCurrentUserScores() {
