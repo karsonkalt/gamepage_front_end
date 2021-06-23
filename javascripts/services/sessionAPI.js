@@ -61,7 +61,6 @@ class SessionAPI {
             } else {
                 opponentUsername = json.username
                 opponentUserId = json.id
-                // Start the game
                 Menu.startGame()
             }
         })
