@@ -8,7 +8,7 @@ class Game {
     }
 
     static updateGameID() {
-        gameID().innerText = `Game ${currentGameId}`
+        gameID().innerText = `Game ID: ${String(currentGameId).padStart(4, '0')}`
     }
 
     static transormTurnIndicatorIntoPlayAgainButton() {

@@ -27,14 +27,14 @@ class SessionAPI {
     }
 
     static clickLogout(event) {
-        fetch(root + "/logout")
-            .then(resp => resp.json())
-            .then(json => {
-                logoutButton().remove()
-                Menu.clearScreen()
-                Session.addLoginDiv()
-                currentUsername = ""
-        })
+        logoutButton().remove()
+        Menu.clearScreen()
+        Session.addLoginDiv()
+        currentUsername = ""
+        currentUserId = ""
+        opponentUsername = ""
+        opponentUserId = ""
+        currentGameId = null
     }
 
     static clickOpponentLogin(event) {
