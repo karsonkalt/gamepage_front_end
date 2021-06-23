@@ -123,6 +123,7 @@ class Menu {
             <div id="gameLog">
                 <div id="gameLogHeader">
                     <h2>GameLog</h2>
+                    <div id="gameID"></div>
                 </div>
                 <div id="messenger">
                     <div style="border: 1px;">

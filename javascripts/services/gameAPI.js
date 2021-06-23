@@ -3,8 +3,10 @@ class GameAPI {
         fetch(root + "/board/new")
             .then(resp => resp.json())
             .then(json => {
+                currentGameId = json.id
                 Messenger.addInfoResponseToChat("A new game has started")
                 Game.updateTurnIndicator()
+                Game.updateGameID()
         })
     }
 
@@ -28,9 +30,9 @@ class GameAPI {
         fetch(root + "/board/play/" + event.target.id, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
-            }
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({boardId: currentGameId})
         })
             .then(resp => resp.json())
             .then(json => {

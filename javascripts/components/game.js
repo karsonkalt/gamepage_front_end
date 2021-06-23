@@ -7,6 +7,10 @@ class Game {
         turnIndicator().innerText = `${currentUserUsername()}'s turn`
     }
 
+    static updateGameID() {
+        gameID().innerText = `Game ${currentGameId}`
+    }
+
     static transormTurnIndicatorIntoPlayAgainButton() {
         turnIndicator().classList.remove("turn")
         turnIndicator().classList.add("gameOver")

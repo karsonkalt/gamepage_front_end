@@ -17,6 +17,7 @@ const loginError = () => document.querySelector(".loginError")
 const header = () => document.querySelector("#header")
 const logoutButton = () => document.querySelector("#logout")
 const topUserContainer = () => document.querySelector("#topUserContainer")
+const gameID = () => document.querySelector("#gameID")
 
 // Constant Game References
 const cellArray = [
@@ -37,6 +38,7 @@ let currentUsername = ""
 let currentUserId = ""
 let opponentUsername = ""
 let opponentUserId = ""
+let currentGameId = null
 
 const userNames = () => {
     return [currentUsername, opponentUsername]

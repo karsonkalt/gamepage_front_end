@@ -53,7 +53,6 @@ class SessionAPI {
                     loginError().remove()
                 }
                 Session.addErrorMessage(json)
-                debugger
             } else if (json.username == currentUsername) {
                 if (loginError()) {
                     loginError().remove()
