@@ -10,6 +10,13 @@
   "keywords": [
     "js"
   ],
+  "backend": {
+    "name": "gamepage_back_end",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/karsonkalt/gamepage_back_end.git"
+    }
+  },
   "author": "karsonkalt",
   "license": "ISC",
   "bugs": {
