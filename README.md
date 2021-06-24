@@ -3,6 +3,8 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/karsonkalt/gamepage_front_end)
 ![Twitter Follow](https://img.shields.io/twitter/follow/karsonkalt?style=social)
 
+![Gif of GamePage being rendered in a browser](https://github.com/karsonkalt/gamepage_front_end/README_assets/overview.gif)
+
 GamePage is a web app built in Rails and JavaScript that lets two players play the classic board game "Reversi" aka "Othello". The basic premise of the game is to place tokens on the board. When placing a token, you attempt to also swap any opponent's tokens that lay between your placed token and your other tokens with your own.
 
 Players take turns placing tokens, until the entire board is filled. At the end of the game, the player with the highest amount of tokens on the board wins. Watch Triple S's video ["How to Play Othello"](https://www.youtube.com/watch?v=xDnYEOsjZnM&ab_channel=TripleSGames) to learn more.
