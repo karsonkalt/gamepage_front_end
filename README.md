@@ -37,6 +37,8 @@ The backend is managed through rails MVC architecture and renders JSON. The data
 - [othello_ruby](https://rubygems.org/gems/othello_ruby/versions/0.1.0) [![Gem Version](https://badge.fury.io/rb/othello_ruby.svg)](https://badge.fury.io/rb/othello_ruby)
 - [hashdiff](https://rubygems.org/gems/hashdiff) [![Gem Version](https://badge.fury.io/rb/hashdiff.svg)](https://badge.fury.io/rb/hashdiff)
 
+Gamepage does not have any `npm` dependencies, full `npm` data can be found in [package.json](https://github.com/karsonkalt/gamepage_front_end/blob/main/package.json).
+
 
 ## Contributing to GamePage
 To contribute to GamePage, follow these steps:
