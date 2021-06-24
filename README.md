@@ -3,8 +3,13 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/karsonkalt/gamepage_front_end)
 ![Twitter Follow](https://img.shields.io/twitter/follow/karsonkalt?style=social)
 
-<!-- Houseplant helper is a Ruby on Rails web application used to track how often you water your houseplants, keep notes on how they are doing, and get tips on how to take care of your plants. A user can create plants which also belong to a species and edit data that belongs to the logged_in user. -->
+GamePage is a web app built in Rails and JavaScript that lets two players play the classic board game "Reversi" aka "Othello". The basic premise of the game is to place tokens on the board. When placing a token, you attempt to also swap any opponent's tokens that lay between your placed token and your other tokens with your own. Players take turns placing tokens, until the entire board is filled. At the end of the game, the player with the highest amount of tokens on the board wins. [Triple S Game's "How to Play Othello"](https://www.youtube.com/watch?v=xDnYEOsjZnM&ab_channel=TripleSGames)
 
+Once a player wins a game, their score is recorded to the database and the players have the options of playing again.
+
+GamePage is split into two repos, front end and back end:
+- Frontend:[github.com/karsonkalt/gamepage_front_end](https://github.com/karsonkalt/gamepage_front_end)
+- Backend: [github.com/karsonkalt/gamepage_back_end](https://github.com/karsonkalt/gamepage_back_end)
 
 ## Architecture and models
 
