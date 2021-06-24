@@ -1,4 +1,4 @@
-# GamePage Front End
+# GamePage Frontend
 ![GitHub repo size](https://img.shields.io/github/repo-size/karsonkalt/gamepage_front_end)
 ![GitHub last commit](https://img.shields.io/github/last-commit/karsonkalt/gamepage_front_end)
 ![Twitter Follow](https://img.shields.io/twitter/follow/karsonkalt?style=social)
@@ -11,7 +11,7 @@ Players take turns placing tokens, until the entire board is filled. At the end 
 
 Once a player wins a game, their score is recorded to the database and the players have the options of playing again.
 
-GamePage is split into two repositories, front end and back end:
+GamePage is split into two repositories, frontend and backend:
 - Frontend: [github.com/karsonkalt/gamepage_front_end](https://github.com/karsonkalt/gamepage_front_end)
 - Backend: [github.com/karsonkalt/gamepage_back_end](https://github.com/karsonkalt/gamepage_back_end)
 
@@ -22,12 +22,12 @@ GamePage is split into two repositories, front end and back end:
 3. Run rails migrations by running `rails db:migrate`
 4. Run the seed file by running `rails db:seed`
 5. Serve the rails backend by running `rails s`
-6. If you have changed the localhost, open `global.js` inside the front end directory and update the root variable.
+6. If you have changed the localhost, open `global.js` inside the frontend directory and update the root variable.
 7. Open `index.html` in your browser.
 
 
 ## Architecture
-GamePage front end is divided up into two directories, components and services. The components directory contains classes for each major component of the front end: Game, Menu, Messenger, Score, Session, and User. The services directory contains the API fetch calls that GET and POST to the rails server: GameAPI, ScoreAPI, SessionAPI, and UserAPI.
+GamePage frontend is divided up into two directories, components and services. The components directory contains classes for each major component of the frontend: Game, Menu, Messenger, Score, Session, and User. The services directory contains the API fetch calls that GET and POST to the rails server: GameAPI, ScoreAPI, SessionAPI, and UserAPI.
 
 The backend is managed through rails MVC architecture and renders JSON. The database is managed through ActiveRecord and layers on ruby models with instance methods for additional funcitonality.
 
