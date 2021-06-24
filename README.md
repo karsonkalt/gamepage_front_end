@@ -31,9 +31,9 @@ The backend is managed through rails MVC architecture and renders JSON. The data
 
 
 ## Dependencies
-- [GamePage Backend](https://github.com/karsonkalt/gamepage_back_end) [![GitHub last commit](https://img.shields.io/github/last-commit/karsonkalt/gamepage_back_end](https://github.com/karsonkalt/gamepage_back_end)
-- [othello_ruby ~> 0.1.0](https://rubygems.org/gems/othello_ruby/versions/0.1.0) [![Gem Version](https://badge.fury.io/rb/othello_ruby.svg)](https://badge.fury.io/rb/othello_ruby)
-- [hashdiff ~> 1.0](https://rubygems.org/gems/hashdiff) [![Gem Version](https://badge.fury.io/rb/hashdiff.svg)](https://badge.fury.io/rb/hashdiff)
+- [GamePage Backend](https://github.com/karsonkalt/gamepage_back_end) ![GitHub last commit](https://img.shields.io/github/last-commit/karsonkalt/gamepage_back_end]
+- [othello_ruby](https://rubygems.org/gems/othello_ruby/versions/0.1.0) [![Gem Version](https://badge.fury.io/rb/othello_ruby.svg)](https://badge.fury.io/rb/othello_ruby)
+- [hashdiff](https://rubygems.org/gems/hashdiff) [![Gem Version](https://badge.fury.io/rb/hashdiff.svg)](https://badge.fury.io/rb/hashdiff)
 
 
 ## Contributing to GamePage
