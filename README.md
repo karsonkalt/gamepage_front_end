@@ -9,20 +9,31 @@ Players take turns placing tokens, until the entire board is filled. At the end 
 
 Once a player wins a game, their score is recorded to the database and the players have the options of playing again.
 
-GamePage is split into two repos, front end and back end:
-- Frontend:[github.com/karsonkalt/gamepage_front_end](https://github.com/karsonkalt/gamepage_front_end)
+GamePage is split into two repositories, front end and back end:
+- Frontend: [github.com/karsonkalt/gamepage_front_end](https://github.com/karsonkalt/gamepage_front_end)
 - Backend: [github.com/karsonkalt/gamepage_back_end](https://github.com/karsonkalt/gamepage_back_end)
 
-## Architecture and models
 
-<!-- Houseplant helper consists of four basic models -- Species, Users, Plants, and Waterings. Plants belong to a Species and a User, and have attributes of their own such as a nickname and water_frequency. Species are pre-loaded into the database on the backend. Users can sign up and login through third party authentication or with their own username and password.
+## Installation & Usage
+1. Fork and clone this repository and the [GamePage Backend repository](https://github.com/karsonkalt/gamepage_back_end)
+2. `cd` into your local backend repository and run `bundle`
+3. Run rails migrations by running `rails db:migrate`
+4. Run the seed file by running `rails db:seed`
+5. Serve the rails backend by running `rails s`
+6. If you have changed the localhost, open `global.js` inside the front end directory and update the root variable.
+7. Open `index.html` in your browser.
 
-The database is managed through ActiveRecord and layer on ruby methods for additional funcitonality. For example, an instance of Plant can call the method needs_to_be_watered? which will query the database for the most recent watering and return true or false if it has been more than it's water_frequency. -->
+
+## Architecture
+GamePage front end is divided up into two directories, components and services. The components directory contains classes for each major component of the front end: Game, Menu, Messenger, Score, Session, and User. The services directory contains the API fetch calls that GET and POST to the rails server: GameAPI, ScoreAPI, SessionAPI, and UserAPI.
+
+The backend is managed through rails MVC architecture and renders JSON. The database is managed through ActiveRecord and layers on ruby models with instance methods for additional funcitonality.
 
 
-## Development
-
-<!-- To get started with Houseplant Helper, run `bundle` from the command line to install all necessary gems. After dependencies have been installed run `rails db:reset` to run the db migrations and seed the database, then run `rails s` from the console to start serving the site to `http://localhost:3000/`. You can then log in with your own information or view a seed account by viewing the User database and selecting a User email and entering the seed password `password`. -->
+## Dependencies
+- [GamePage Backend](https://github.com/karsonkalt/gamepage_back_end) [![GitHub last commit](https://img.shields.io/github/last-commit/karsonkalt/gamepage_back_end](https://github.com/karsonkalt/gamepage_back_end)
+- [othello_ruby ~> 0.1.0](https://rubygems.org/gems/othello_ruby/versions/0.1.0) [![Gem Version](https://badge.fury.io/rb/othello_ruby.svg)](https://badge.fury.io/rb/othello_ruby)
+- [hashdiff ~> 1.0](https://rubygems.org/gems/hashdiff) [![Gem Version](https://badge.fury.io/rb/hashdiff.svg)](https://badge.fury.io/rb/hashdiff)
 
 
 ## Contributing to GamePage
@@ -38,17 +49,14 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 
 ## Contributors
-
 This project was created by [@karsonkalt](https://github.com/karsonkalt) as a student of [Flatiron School Software Engineering](https://flatironschool.com/)
 
 
 ## Contact
-
 If you want to contact me you can reach me on Twitter at [@karsonkalt](http://www.twitter.com/karsonkalt)
 
 
 ## Licensed with BSD 2-Clause “Simplified” License
-
 BSD 2-Clause License
 
 Copyright (c) [2021], [karsonkalt]
